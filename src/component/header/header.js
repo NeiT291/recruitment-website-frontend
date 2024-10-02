@@ -1,17 +1,28 @@
-function header() {
-    return(
-        <header>
-        <h2 class="logo">Logo</h2>
-        <nav class="navigation">
+import React from 'react';
+import { Link } from 'react-router-dom';
+// import './App.css';
+
+function Header({ onLoginClick }) {
+  return (
+    <div>
+      <header>
+        <h2 className="logo">Logo</h2>
+        <nav className="navigation">
+          <ul>
             <li><a href="#">Hồ sơ CV</a></li>
             <li><a href="#">Việc làm</a></li>
             <li><a href="#">Công ty</a></li>
+          </ul>
         </nav>
-        <nav class="navigation2">
-            <button class="btnLogin-popup2">Đăng ký</button>
-            <button class="btnLogin-popup">Đăng nhập</button>
+        <nav className="navigation2">
+          <button className="btnLogin-popup2">Đăng ký</button>
+          <Link to="/login">
+            <button className="btnLogin-popup" onClick={onLoginClick}>Đăng nhập</button>
+          </Link>
         </nav>
-    </header>
-    );
+      </header>
+    </div>
+  );
 }
-export default header;
+
+export default Header;
