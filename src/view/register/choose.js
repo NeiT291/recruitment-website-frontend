@@ -1,19 +1,23 @@
-function choose() {
+import { Link } from "react-router-dom";
+import './Register.css'
+function Choose() {
     return (
-        <div class="form-box register">
-            <h2>Bạn là?</h2>
-            <form>
-                <div>
-                    <button type="submit" class="register-link-A">HR</button>
-                    <h2>Hay là</h2>
-                    <button type="submit" class="register-link-B">User</button>
-                </div>
+        <div className="form-box">
+            <div className="register-choose">
+                <h2>Bạn muốn?</h2>
+                <button>
+                    <Link to='/register/hr'>Đăng tuyển</Link>
+                </button>
+                <button>
+                    <Link to='/register/user'>Xin việc</Link>
+                </button>
+                
                 <div class="login-register">
-                    <p>Đã có tài khoản? <a href="javascript:void(0)" class="login-link1">Đăng nhập</a></p>
+                    <p>Đã có tài khoản? <Link to='/login'>Đăng nhập</Link></p>
                 </div>
-            </form>
+            </div>
         </div>
       );
 }
 
-export default choose;
+export default Choose;

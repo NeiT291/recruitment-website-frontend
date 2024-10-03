@@ -1,0 +1,92 @@
+.form-box{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-choose{
+    background-color: white;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem 0 #888888;
+}
+.register-choose a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.register-choose a:active, .register-choose a:visited{
+    color: black;
+}
+.register-choose button{
+    font-size: 3rem;
+    margin: 0 2rem 2rem 2rem;
+    height: 5rem;
+    width: 30rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #15B392;
+    opacity: 0.8;
+    cursor: pointer;
+}
+.register-choose button:hover{
+    opacity: 1;
+    transition: .2s;
+}
+.register-choose button a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 5rem;
+}
+
+
+.register-hr{
+    background-color: white;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem 0 #888888;
+}
+.input-box{
+    margin: 0 2rem 2rem 2rem;
+}
+.input-box input{
+    padding: 1rem 1rem 1rem 5rem;
+    position: relative;
+    border: 1px black;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 #888888;
+    width: 40rem
+}
+.input-box input::placeholder{
+    font-size: 2rem;
+}
+.input-box input:focus{
+    outline: none;
+}
+.input-box i{
+    font-size: 2rem;
+    position: absolute;
+    z-index: 999;
+    padding-left: 2rem;
+}
+.register-hr button{
+    font-size: 3rem;
+    margin: 0 2rem 2rem 2rem;
+    height: 5rem;
+    width: 80%;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #15B392;
+    opacity: 0.8;
+    cursor: pointer;
+}

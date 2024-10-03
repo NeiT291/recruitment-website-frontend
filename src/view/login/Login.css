@@ -1,0 +1,74 @@
+.form-box{
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-form{
+    background-color: white;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem 0 #888888;
+}
+
+#login-form h2{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+.input-box input{
+    padding: 1rem 1rem 1rem 5rem;
+    position: relative;
+    border: 1px black;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem 0 #888888;
+}
+.input-box input::placeholder{
+    font-size: 2rem;
+}
+.input-box input:focus{
+    outline: none;
+}
+.input-box i{
+    font-size: 2rem;
+    position: absolute;
+    z-index: 999;
+    padding-left: 2rem;
+}
+#login-form .remember-or-forgot{
+    font-size: 2.5rem;
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#login-form button{
+    font-size: 3rem;
+    margin: 2rem 0;
+    height: 5rem;
+    width: 20rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #15B392;
+    opacity: 0.8;
+    cursor: pointer;
+}
+#login-form button:hover{
+    opacity: 1;
+    transition: .2s;
+}
+#login-form .register{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}

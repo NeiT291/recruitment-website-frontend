@@ -1,40 +1,44 @@
-function registerHr() {
+import './Register.css'
+function RegisterHr() {
     return(
-        <div class="form-box register-2">
-            <h2>Đăng kí</h2>
-            <form>
+        <div class="form-box">
+            <form className='register-hr'>
+                <h2>Đăng kí</h2>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
-                    <input type="Username" required placeholder="Tên đăng nhập"/>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" required placeholder="Tên đăng nhập"/>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-                    <input type="password" required placeholder="Mật khẩu"/>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" className='password'required placeholder="Mật khẩu"/>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" className='re-password' required placeholder=" Nhập lại mật khẩu"/>
+                </div>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
                     <input type="email" required placeholder="Email"/>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-                    <input type="Phone number" required placeholder="Số điện thoại"/>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" required placeholder="Số điện thoại"/>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
-                    <input type="Address" required placeholder="Địa chỉ"/>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" required placeholder="Địa chỉ"/>
                 </div>
                 <div class="input-box">
-                    <span class="icon"><ion-icon name="business-outline"></ion-icon></span>
-                    <input type="Company" required placeholder="Tên công ty"/>
+                    <i class="fa-solid fa-building"></i>
+                    <input type="text" required placeholder="Tên công ty"/>
                 </div>
                 <div class="input-box">
+                    <i class="fa-solid fa-calendar-days"></i>
                     <input type="date" id="dob" name="dob" required/>
                 </div>
-                <div>
-                    <button type="submit" class="btn">Đăng kí</button>
-                </div>
+                <button type="submit" class="btn">Đăng kí</button>
             </form>
         </div>
     );
 }
-export default registerHr;
+export default RegisterHr;
