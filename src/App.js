@@ -5,6 +5,7 @@ import Choose from './view/Register/Choose';
 import RegisterHr from './view/Register/RegisterHr';
 import RegisterUser from './view/Register/RegisterUser';
 import Home from './view/Home/Home';
+import CV from './view/CV/CV.js';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path='register' element={<Choose/>}></Route>
                 <Route path='register/hr' element={<RegisterHr/>}></Route>
                 <Route path='register/user' element={<RegisterUser/>}></Route>
+                <Route path='CV' element={<CV/>}></Route>
             </Route>
         </Routes>
     </>
