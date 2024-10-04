@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         <div className="header-options">
           <div className='link'>
-            <Link to="#">Hồ sơ CV</Link>
+            <Link to="/CV">Hồ sơ CV</Link>
             <Link to="#">Việc làm</Link>
             <Link to="#">Công ty</Link>
           </div>
