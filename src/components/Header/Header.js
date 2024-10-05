@@ -38,9 +38,11 @@ export default function Header() {
         </div>
         <div className="header-options">
           <div className='link'>
+
             <Link to="#">Hồ sơ CV</Link>
             <a href="#job-list">Việc làm</a>
             <a href="#company-list">Công ty</a>
+
           </div>
           <div className='login-register' hidden={hidden}>
             <button className="header-login-btn" hidden={hidden}>
