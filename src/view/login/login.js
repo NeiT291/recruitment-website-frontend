@@ -1,23 +1,30 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
 import loginApi from '../../service/auth';
+import { useContext } from 'react';
+import { TokenContext } from '../../App';
 export default function Login() {
    
     const navigate = useNavigate()
-    const login = (e) => {
+    const { setToken } = useContext(TokenContext);
+    let username;
+    let password;
+    
+    const login = async (e) => {
         e.preventDefault();
-        let username = document.getElementById('login-username').value;
-        let password = document.getElementById('login-password').value;
+        username = document.getElementById('login-username').value;
+        password = document.getElementById('login-password').value;
         if(username == null || password == null || username === "" || password === ""){
             return;
         }
-        loginApi(username, password);
-        if(localStorage.getItem("token") != null){
+        const token = await loginApi(username, password);
+        setToken(token);
+        if(token != null){
             navigate("/",  { replace: true });
-            window.location.reload();
         }
-        return;
+        
     }
+    
     return (    
         <div className="form-box">
             <form id='login-form' onSubmit={login}>

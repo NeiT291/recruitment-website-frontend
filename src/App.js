@@ -5,10 +5,24 @@ import Choose from './view/Register/Choose';
 import RegisterHr from './view/Register/RegisterHr';
 import RegisterUser from './view/Register/RegisterUser';
 import Home from './view/Home/Home';
+import { createContext, useState } from 'react';
 
+export const TokenContext = createContext();
+
+const TokenContextProvider = ({ children }) => {
+    const [token, setToken] = useState(localStorage.getItem("token"));
+
+    return (
+        <TokenContext.Provider value={{ token, setToken }}>
+            {children}
+        </TokenContext.Provider>
+    );
+};
 function App() {
+  
   return (
     <>
+    <TokenContextProvider>
         <Routes>
             <Route path='/' element={<LayoutMain/>}>
                 <Route index element={<Home/>}></Route>
@@ -18,6 +32,7 @@ function App() {
                 <Route path='register/user' element={<RegisterUser/>}></Route>
             </Route>
         </Routes>
+    </TokenContextProvider>
     </>
   );
 }
