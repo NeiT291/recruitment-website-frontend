@@ -1,0 +1,22 @@
+.create-company-container{
+    width: 100%;
+    height: 90vh;
+    padding-left: 20%;
+    margin-top: 5rem;
+}
+.create-job-container label{
+    font-size: 2rem;
+}
+.create-company-container .form-create{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.create-company-container .form-create label{
+    font-size: 2rem;
+    align-self: flex-start;
+    margin-left: 15.5%;
+}
+.create-company-container .form-create input, .create-company-container .form-create textarea{
+    margin-bottom: 5rem;
+}

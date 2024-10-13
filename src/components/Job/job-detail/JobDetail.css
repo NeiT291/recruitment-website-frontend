@@ -1,0 +1,101 @@
+
+/* .App-header{
+    display: none;
+} */
+
+
+.job-detail-container{
+    width: 70%;
+    font-size: 7rem;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+.job-overview{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+}
+.job-overview, .job-name{
+    font-size: 3.5rem;
+}
+.job-overview .info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.job-overview .info div{
+    padding: 1rem;
+    background-color: #f2f4f5;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+}
+.job-overview .info div i{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons .apply {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: .2s;
+}
+
+.action-buttons .apply:hover {
+    opacity: 1;
+}
+
+.job-details{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 2rem 0;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+}
+.job-details h2{
+    margin: 0 0 2rem 0;
+    border-left: 1rem solid #28a745;
+    padding-left: 1rem;
+}
+.job-details .job-description{
+    font-size: 3rem;
+}
+
+#resume_upload{
+    display: none;
+}
+.action-buttons label{
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: .2s;
+}
+

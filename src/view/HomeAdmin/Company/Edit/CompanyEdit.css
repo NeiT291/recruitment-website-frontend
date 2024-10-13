@@ -1,0 +1,41 @@
+.edit-company-container{
+    width: 100%;
+    height: 90vh;
+    padding-left: 20%;
+}
+.company-logo{
+    height: 20rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.company-logo img{
+    width: 100%;
+    height: 100%;
+}
+.edit-logo{
+    width: 15rem;
+    background-color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    text-align: center;
+    cursor: pointer;
+}
+.edit-company-container label{
+    font-size: 2rem;
+}
+.upload-button label{
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: .2s;
+}
+#logo_upload{
+    display: none;
+}

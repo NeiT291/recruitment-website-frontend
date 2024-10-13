@@ -1,6 +1,7 @@
 import Header from "../components/Header/Header";
 import { Outlet } from 'react-router-dom';
 import './Layout.css'
+
 export default function LayoutMain(){
     return (
         <div className="App">
@@ -8,7 +9,7 @@ export default function LayoutMain(){
                 <Header></Header>
             </div>
             <div className="App-content">
-                <Outlet/>
+                    <Outlet/>
             </div>
             <div className="App-footer">
 

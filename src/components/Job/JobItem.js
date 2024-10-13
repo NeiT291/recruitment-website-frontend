@@ -1,9 +1,23 @@
+import { useEffect, useState } from 'react';
+import companyService from '../../service/companyService';
 import './JobItem.css'
+import { Link, replace, useNavigate } from 'react-router-dom';
 export default function JobItem(props){
+    const [img, setImg] = useState(companyService.getLogo(props.idItem))
+    
+    const navigate = useNavigate()
+    useEffect(()=>{
+        const fetchData = async ()=> {
+                setImg(await companyService.getLogo(props.idItem));
+        }
+        fetchData();
+
+    },[])
+    
     return(
-        <div className="job-item">
+        <Link className="job-item" to={`/job?id=${props.idItem}`}>
             <div className="logo">
-                <img src="https://cms.imgworlds.com/assets/9558de9d-1e49-437e-aa7b-b8bd4d999b00.jpg?key=home-gallery" alt=""></img>
+                <img src={img} alt=""></img>
             </div>
             <div className="job-info">
                 <h2 className="info-name">{props.name}</h2>
@@ -14,6 +28,6 @@ export default function JobItem(props){
                     <span>{props.profession}</span>
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }

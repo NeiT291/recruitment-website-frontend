@@ -3,6 +3,7 @@ import './Login.css'
 import loginApi from '../../service/auth';
 import { useContext } from 'react';
 import { TokenContext } from '../../App';
+import userService from '../../service/userService';
 export default function Login() {
    
     const navigate = useNavigate()
@@ -20,7 +21,19 @@ export default function Login() {
         const token = await loginApi(username, password);
         setToken(token);
         if(token != null){
+            const user = await userService.getUserInfo(token);
+            if(user.role === "HR"){
+                navigate("/hr",  { replace: true });
+                return
+            }
+            if(user.role === "ADMIN"){
+                navigate("/admin",  { replace: true });
+                return
+            }
             navigate("/",  { replace: true });
+        }else{
+            alert("Tài khoản hoặc mật khẩu chưa chính xác!!!")
+            navigate("/login",  { replace: true });
         }
         
     }

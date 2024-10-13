@@ -1,0 +1,56 @@
+.job-hr-item{
+    display: grid;
+    margin: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    grid-auto-flow: column;  
+    grid-template-columns: 2rem 6rem 6rem 3rem 6rem 6rem 3rem 2rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.job-hr-item .job-info{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.job-hr-item span{
+    font-size: 2rem;
+    text-wrap: nowrap;
+    color: black;
+    padding: 0 1rem;
+    text-wrap: nowrap;
+}
+.job-hr-item span i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+.job-hr-item-container{
+    position: relative;
+}
+.span_item{
+    position: absolute;
+    font-size: 2rem;
+    top: 0;
+    right: 0;
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+    
+}
+.span_item i{
+    color: black;
+    font-size: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: .2s;
+
+}
+.span_item i:hover{
+    opacity: 1;
+}

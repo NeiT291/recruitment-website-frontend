@@ -1,0 +1,55 @@
+.edit-job-container{
+    width: 100%;
+    height: 90vh;
+    padding-left: 20%;
+}
+.form-edit{
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    height: 100%;
+    background-color: aliceblue;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    border-radius: 0 2rem 2rem 0;    
+}
+.form-edit input, .form-edit textarea, .form-edit select{
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+    height: 4rem;
+    max-height: 40%;
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+}
+.form-edit textarea{
+    height: 20%;
+    padding: 1rem; 
+}
+.form-edit button{
+    width: 10rem;
+    height: 5rem;
+    background-color: green;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: .2s;
+    margin-top: 2rem;
+}
+.form-edit button:hover{
+    opacity: 1;
+}
+.form-edit input:focus, .form-edit textarea:focus, .form-edit select:focus{
+    outline: none;
+}
+.form-edit label{
+    width: 70%;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-left: 0.5rem;
+}

@@ -13,7 +13,7 @@
     align-items: center;
     border: none;
     border-radius: 2rem;
-    box-shadow: 0 0 2rem 0 #888888;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
 }
 
 #login-form h2{
@@ -31,7 +31,7 @@
     position: relative;
     border: 1px black;
     border-radius: 1rem;
-    box-shadow: 0 0 1rem 0 #888888;
+    
 }
 .input-box input::placeholder{
     font-size: 2rem;
@@ -71,4 +71,7 @@
 #login-form .register{
     font-size: 2rem;
     margin-bottom: 2rem;
+}
+#login-username, #login-password {
+    box-shadow: 0 16px 16px 0 rgba(1, 8, 16, 0.04);
 }

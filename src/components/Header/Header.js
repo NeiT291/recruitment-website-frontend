@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Header.css'
 import logo from '../../assets/imgs/logo.png'
 import Userservice from '../../service/userService';
@@ -11,6 +11,7 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
   const { setToken } = useContext(TokenContext);
   const { token } = useContext(TokenContext);
+  const navigate = useNavigate();
     useEffect(()=>{
       const fetchData = async () =>{
         const info = await Userservice.getUserInfo(token);
@@ -18,7 +19,10 @@ export default function Header() {
         setAvatar(info.avatar);        
       }
       if(token == null || token === ""){
-        handleLogout();
+        // handleLogout();
+        Userservice.logout();
+        setToken(localStorage.getItem("token"))
+        setHidden(false)
       }else{
         setHidden(true);
       }
@@ -28,8 +32,8 @@ export default function Header() {
       Userservice.logout();
       setToken(localStorage.getItem("token"))
       setHidden(false)
+      navigate("/",  { replace: true });
     }
-    console.log("out: " + hidden);
   return (
     <div className='header-content'>
         <div className='logo'>
@@ -38,11 +42,7 @@ export default function Header() {
         </div>
         <div className="header-options">
           <div className='link'>
-
-            <Link to="#">Hồ sơ CV</Link>
-            <a href="#job-list">Việc làm</a>
-            <a href="#company-list">Công ty</a>
-
+            <Link to="/">Trang chủ</Link>
           </div>
           <div className='login-register' hidden={hidden}>
             <button className="header-login-btn" hidden={hidden}>
@@ -56,7 +56,6 @@ export default function Header() {
             <img id='user-avatar' src={avatar}  alt='' hidden={!hidden}></img>
             <span hidden={!hidden}>{fullname}</span>
             <div className='options' hidden={!hidden}>
-              <span>Thông tin cá nhân</span>
               <span onClick={handleLogout}>Đăng xuất</span>
             </div>
           </div>

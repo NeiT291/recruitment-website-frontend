@@ -11,7 +11,9 @@ export async function getUserInfo(token){
             })
             .then( async function (response) {
                 info.fullname = response.data.data.fullname;
+                info.company = response.data.data.company;
                 info.avatar = await getAvatar(response.data.data.username);
+                info.role = response.data.data.roles[0].name;
                 return response;
             })
             .catch(function (error) {
@@ -41,7 +43,7 @@ export async function getAvatar(username){
 export function logout(){
     
     localStorage.removeItem("token");
-    // window.location.reload();
+
 }
 export async function registerUser(data){
     let info;
@@ -66,14 +68,15 @@ export async function registerUser(data){
 }
 export async function registerHr(data){
     let info;
-    await axios.post(apiUrl, {
+    await axios.post(apiUrl + "/hr", {
                 username: data.username,
                 password: data.password,
                 fullname: data.fullname,
                 email: data.email,
                 phone: data.phone,
                 address: data.address,
-                dob: data.dob
+                dob: data.dob,
+                company: data.company
             })
             .then(function (response) {
                 info = response.data.data;

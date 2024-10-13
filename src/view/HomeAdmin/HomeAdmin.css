@@ -1,0 +1,40 @@
+.home-admin-container{
+    display: flex;
+    font-size: 3rem;
+    width: 100%;
+    
+}
+
+.home-admin-sidebar{
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 7rem;
+}
+.home-admin-sidebar a{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    width: 100%;
+    transition: .2s;
+    border-radius: 1rem 0 0 1rem;
+}
+.home-admin-sidebar a:hover{
+    background-color: white;
+    color: #2c3e50;
+}
+.home-admin-content{
+    padding-top: 7rem;
+    width: 100%;
+}
+
+
+
+

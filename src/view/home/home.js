@@ -65,6 +65,7 @@ function Home() {
         <>
             <div className="banner">
                 <img className="banner-img" src={banner} alt=""></img>
+                <h1>TÌM VIỆC NGAY</h1>
             </div>
             <div className="home-page">
                 <div className="search-bar">

@@ -18,7 +18,8 @@
 .page-info i{
     padding: 1rem;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #15B392;
+    color: #15B392;
     border-radius: 100%;
     width: 4.5rem;
     height: 4.5rem;
@@ -26,26 +27,21 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 0 1rem;
 }
 
 
 .page-info .current-page, .page-info .total-pages{
-    padding: 1rem;
-    cursor: pointer;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 100%;
-    width: 4.5rem;
+    text-wrap: nowrap;
     height: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
     opacity: 0.8;
     transition: .2s;
 }
 .page-info .current-page{
-    background-color: #15B392;
+    color: #15B392;
 }
 .page-info .current-page:hover, .page-info .total-pages:hover{
     opacity: 1;
