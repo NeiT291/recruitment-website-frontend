@@ -4,7 +4,7 @@
     margin-left: 3rem;
     margin-right: 2rem;
     grid-auto-flow: column;  
-    grid-template-columns: 2rem 6rem 6rem 3rem 6rem 6rem 3rem 2rem 1rem;
+    grid-template-columns: 2rem 25rem 20rem 15rem 20rem 10rem 13rem 10rem 2rem;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
@@ -21,10 +21,10 @@
 }
 .job-hr-item span{
     font-size: 2rem;
-    text-wrap: nowrap;
+    text-wrap: wrap;
     color: black;
     padding: 0 1rem;
-    text-wrap: nowrap;
+
 }
 .job-hr-item span i {
     font-size: 2rem;
