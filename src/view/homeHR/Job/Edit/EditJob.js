@@ -70,7 +70,7 @@ export default function EditJob(props){
                 city: city
             }
             const response = await jobService.editJob(id, info);
-            if(response.code === 200){
+            if(await response.code === 200){
                 navigate("/hr",  { replace: true });
             }else{
                 alert("Lỗi!!!")

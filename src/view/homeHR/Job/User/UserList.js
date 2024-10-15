@@ -11,7 +11,8 @@ export default function UserList(props){
     const [userList, setUserList] = useState(resumeService.getUserList(id));
     useEffect(()=>{
         const fetchJob = async () =>{
-            setUserList(await resumeService.getUserList(id))
+            const tempUsers = await resumeService.getUserList(id);
+            setUserList(tempUsers);
             setJobInfo(await jobService.getJobById(id));
         }
         fetchJob();
@@ -53,7 +54,7 @@ export default function UserList(props){
             </div>
             <div className='user-list-content'>
                 <div>
-                    {userList.data?.map((item) => {
+                    {userList?.data?.map((item) => {
                         return (
                             <UserItem key={item.id} 
                                 idItem={item.id} 

@@ -41,7 +41,7 @@ export default function CompanyEdit(props){
             website: website
         }
         const response = await companyService.editCompany(id, info);
-        if(response.code === 200){
+        if(await response.code === 200){
             navigate("/admin/company",  { replace: true });
         }else{
             alert("Lỗi!!!")

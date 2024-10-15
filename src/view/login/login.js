@@ -50,10 +50,7 @@ export default function Login() {
                     <i className="fa-solid fa-lock"></i>
                     <input id='login-password' type="password" required placeholder="Mật khẩu"/>
                 </div>
-                <div className="remember-or-forgot">
-                    <label><input type="checkbox" className='remember-password'/>Ghi nhớ đăng nhập</label>
-                    <Link to='/forgot-password'>Quên mật khẩu?</Link>
-                </div>
+                
                 <div>
                     <button type='submit' id="login-submit-btn">Đăng nhập</button>
                 </div>

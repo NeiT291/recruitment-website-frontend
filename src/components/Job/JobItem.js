@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import companyService from '../../service/companyService';
 import './JobItem.css'
-import { Link, replace, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function JobItem(props){
     const [img, setImg] = useState(companyService.getLogo(props.idItem))
-    
-    const navigate = useNavigate()
+
     useEffect(()=>{
         const fetchData = async ()=> {
-                setImg(await companyService.getLogo(props.idItem));
+            const company = await companyService.search(props.company);
+            setImg(await companyService.getLogo(company[0].id));
         }
         fetchData();
 

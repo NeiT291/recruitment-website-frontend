@@ -16,7 +16,7 @@ export default function JobList(props){
     }
     useEffect(()=>{
         const fetchData = async() => {
-            setData(await JobService.search(tempSearch, current_page, 9));
+            setData(await JobService.search(tempSearch, current_page, 10));
         }
         fetchData();
     },[props, current_page])
@@ -42,6 +42,7 @@ export default function JobList(props){
                         if(item.wage !== 0){
                             wage = item.wage + " triệu";
                         }
+                        console.log(item)
                         return (
                             <JobItem key={item.id} idItem={item.id} name={item.name} company={item.company} wage={wage} cities={item.city} profession={item.profession}></JobItem>
                         )

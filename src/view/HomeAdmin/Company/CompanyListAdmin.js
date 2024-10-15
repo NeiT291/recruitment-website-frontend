@@ -25,7 +25,6 @@ export default function CompanyListAdmin(props){
         }
         setCurrentPage(current_page + 1)
     }
-    console.log(companies)
     return(
         <div id="company-admin-container">
                 <div className="page-title">Danh sách công ty</div>

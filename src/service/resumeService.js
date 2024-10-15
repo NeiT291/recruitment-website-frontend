@@ -33,8 +33,9 @@ export async function getUserList(id){
                     "id": id
                 }
             })
-            .then(function (response) {
-                data = response.data.data;
+            .then(async function (response) {
+                console.log(response)
+                data = await response.data.data;
                 return response;
             })
             .catch(function (error) {
