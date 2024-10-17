@@ -109,6 +109,35 @@
 .search-options option{
     font-size: 1.5rem;
 }
+.search-company-form{
+    margin-top: 2rem;
+    width: 100%;
+}
+.search-company-input{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(1,18,34,.04);
+    margin-bottom: 2rem;
+}
+.search-company-input input{
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: 1rem;
+    padding-left: 4rem;
+    font-size: 2rem;
+}
+.search-company-input input:focus{
+    outline: none;
+}
+.search-company-input i{
+    position: absolute;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

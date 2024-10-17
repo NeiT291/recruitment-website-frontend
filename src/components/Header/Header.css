@@ -119,3 +119,12 @@
 .info-user:hover .options{
   display: flex;
 }
+.info-user .options a{
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  text-align: center;
+  background-color: aliceblue;
+  font-size: 1.7rem;
+  opacity: 0.7;
+}

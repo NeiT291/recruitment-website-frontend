@@ -18,6 +18,8 @@ import HomeAdmin from './view/HomeAdmin/HomeAdmin';
 import CompanyListAdmin from './view/HomeAdmin/Company/CompanyListAdmin';
 import CompanyEdit from './view/HomeAdmin/Company/Edit/CompanyEdit';
 import CompanyCreate from './view/HomeAdmin/Company/Create/CompanyCreate';
+import CompanyItemDetail from './components/Company/CompanyItemDetail';
+import MyInfo from './components/MyInfo/MyInfo';
 
 export const TokenContext = createContext();
 
@@ -42,7 +44,9 @@ function App() {
                 <Route path='register' element={<Choose/>}></Route>
                 <Route path='register/hr' element={<RegisterHr/>}></Route>
                 <Route path='register/user' element={<RegisterUser/>}></Route>
+                <Route path='my-info' element={<MyInfo/>}></Route>
                 <Route path='job' element={<JobDetail/>}></Route>
+                <Route path='company' element={<CompanyItemDetail/>}></Route>
                 <Route path='hr' element={<HomeHR/>}>
                     <Route index element={<JobListHr/>}></Route>
                     <Route path='create-job' element={<CreateJob/>}></Route>

@@ -4,9 +4,11 @@ import ProfesstionService from "../../service/professtionService";
 import JobList from "../../components/Job/JobList";
 import './Home.css'
 import banner from '../../assets/imgs/bg_header.webp'
+import CompanyList from "../../components/Company/CompanyList";
 function Home() {
     const [cities, setCities] = useState([]);
     const [professions, setProfesstion] = useState([]);
+    const [search_data_company, setSearchDataCompany] = useState(" ");
     const [search_data, setSearchData] = useState(
         {
             name: null,
@@ -60,7 +62,15 @@ function Home() {
         }
         setSearchData(searchData);
     }
-    
+    const searchCompany = (e) =>{
+        e.preventDefault();
+        e.preventDefault();
+        let searchCompany = document.getElementById("search-company-input").value;
+        if(searchCompany === null || searchCompany === ""){
+            searchCompany = " ";
+        }
+        setSearchDataCompany(searchCompany);
+    }
     return (
         <>
             <div className="banner">
@@ -92,6 +102,14 @@ function Home() {
                         max_wage={search_data.max_wage} 
                         page={search_data.page}
                 ></JobList>
+                <form className="search-company-form" onSubmit={searchCompany}>
+                    <div className="search-company-input">
+                        <i className="fa-solid fa-magnifying-glass"></i>
+                        <input id="search-company-input" placeholder="Công ty"/>
+                    </div>
+                    <input type="submit" hidden></input>
+                </form>
+                <CompanyList name={search_data_company}></CompanyList>
             </div>
         </>
     );

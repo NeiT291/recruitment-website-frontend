@@ -56,6 +56,7 @@ export default function Header() {
             <img id='user-avatar' src={avatar}  alt='' hidden={!hidden}></img>
             <span hidden={!hidden}>{fullname}</span>
             <div className='options' hidden={!hidden}>
+              <Link to="my-info">Thông tin cá nhân</Link>
               <span onClick={handleLogout}>Đăng xuất</span>
             </div>
           </div>

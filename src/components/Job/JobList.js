@@ -16,11 +16,15 @@ export default function JobList(props){
     }
     useEffect(()=>{
         const fetchData = async() => {
-            setData(await JobService.search(tempSearch, current_page, 10));
+            const tempData = await JobService.search(tempSearch, current_page, 10);
+            setData(tempData);
         }
         fetchData();
     },[props, current_page])
     const prev_page = async ()=>{
+        if(data.total_pages === 0){
+            return
+        }
         if(current_page <= 1){
             setCurrentPage(1);
             return;
@@ -28,6 +32,9 @@ export default function JobList(props){
         setCurrentPage(current_page - 1)
     }
     const next_page = async ()=>{
+        if(data.total_pages === 0){
+            return
+        }
         if(current_page === data.total_pages){
             return;
         }
@@ -42,7 +49,6 @@ export default function JobList(props){
                         if(item.wage !== 0){
                             wage = item.wage + " triệu";
                         }
-                        console.log(item)
                         return (
                             <JobItem key={item.id} idItem={item.id} name={item.name} company={item.company} wage={wage} cities={item.city} profession={item.profession}></JobItem>
                         )

@@ -14,6 +14,10 @@ export async function getUserInfo(token){
                 info.company = response.data.data.company;
                 info.avatar = await getAvatar(response.data.data.username);
                 info.role = response.data.data.roles[0].name;
+                info.address = response.data.data.address;
+                info.dob = response.data.data.dob;
+                info.email = response.data.data.email;
+                info.phone = response.data.data.phone;
                 return response;
             })
             .catch(function (error) {
